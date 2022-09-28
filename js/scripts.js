@@ -265,5 +265,16 @@ function scrollLinks() {
 			}
 		}
 	}
+
+	function showPreviewText() {
+		let btn = document.querySelector(".btn__preview");
+		let box = document.querySelector(".preview__hidden");
+
+		btn.addEventListener("click", () => {
+			box.classList.toggle("show");
+		});
+	}
+
+	showPreviewText();
 }
 
