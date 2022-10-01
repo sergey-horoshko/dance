@@ -1535,8 +1535,8 @@ nav .container {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 16px;
-  -webkit-filter: brightness(70%);
-          filter: brightness(70%);
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
 }
 
 .direction__content-title {
@@ -1568,8 +1568,8 @@ nav .container {
 
 .company__item:nth-child(1) {
   position: relative;
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
   height: 540px;
 }
 
@@ -1583,6 +1583,10 @@ nav .container {
   padding: 0 0 0 50px;
 }
 
+.company__img-first {
+  padding-right: 30px;
+}
+
 .company__img-first img {
   max-width: 350px;
 }
@@ -1590,12 +1594,15 @@ nav .container {
 .company__img-second {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -15px;
   z-index: 2;
 }
 
 .company__img-second img {
   max-width: 255px;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .company__text {
@@ -1672,7 +1679,8 @@ nav .container {
 }
 
 .teacher__content-img._six {
-  background: url(../img/teacher_7.jpg) top/cover;
+  background: url(../img/teacher_6.jpg) top/cover;
+  background-position-y: -25px;
 }
 
 .teacher__content-img._seven {
@@ -1977,6 +1985,8 @@ nav .container {
 
 .review__content-box {
   margin-top: 32px;
+  margin-bottom: 16px;
+  height: 100%;
 }
 
 .review__content-text {
@@ -1992,6 +2002,7 @@ nav .container {
   text-align: center;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.7);
+  margin-top: auto;
 }
 
 .map {
@@ -2372,10 +2383,6 @@ nav .container {
     width: 50%;
   }
 
-  .company {
-    display: none;
-  }
-
   .teacher__content-item {
     width: 33%;
   }
@@ -2416,10 +2423,43 @@ nav .container {
 }
 
 @media screen and (max-width: 992px) {
+  .company__item:nth-child(1) {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+
+  .company__img-first {
+    padding-right: 30px;
+  }
+
+  .company__img-first img {
+    width: 100%;
+  }
+
+  .company__img-second {
+    bottom: 0;
+  }
+
+  .company__img-second img {
+    width: 100%;
+  }
+
+  .company__text {
+    font-size: 16px;
+  }
+
+  .company__descr {
+    font-size: 16px;
+  }
+
   .teacher__content-name {
     font-size: 20px;
     max-width: 210px;
     display: block;
+  }
+
+  .teacher__content-img._six {
+    background-position-y: 0px;
   }
 }
 
@@ -2682,12 +2722,67 @@ nav .container {
     margin-bottom: 16px;
   }
 
+  .company h4 {
+    text-align: center;
+  }
+
+  .company .btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .company__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .company__item:nth-child(1) {
+    max-width: 260px;
+    margin: 0 auto 60px;
+  }
+
+  .company__item:nth-child(2) {
+    padding: 0;
+  }
+
+  .company__img-second {
+    max-width: 160px;
+    bottom: -30px;
+  }
+
+  .company__img-second img {
+    height: 180px;
+  }
+
+  .company__text {
+    text-align: center;
+  }
+
+  .company__descr {
+    text-align: center;
+  }
+
   .teacher__content-item {
     width: 50%;
   }
 
   .teacher__content-img {
     max-height: 255px;
+  }
+
+  .teacher__content-img._one {
+    background-position-y: -30px;
+  }
+
+  .teacher__content-img._two {
+    background-position-y: -30px;
+  }
+
+  .teacher__content-img._six {
+    background-position-y: -15px;
   }
 
   .preview {
@@ -2734,6 +2829,12 @@ nav .container {
   }
 }
 
+@media screen and (max-width: 560px) {
+  .teacher__content-img._six {
+    background-position-y: 0;
+  }
+}
+
 @media screen and (max-width: 500px) {
   h1,
   h2 {
@@ -2777,12 +2878,24 @@ nav .container {
     padding: 0 10px;
   }
 
+  .company__text {
+    font-size: 16px;
+  }
+
+  .company__descr {
+    font-size: 16px;
+  }
+
   .teacher__content-item {
     width: 100%;
     padding: 0 10px;
   }
 
   .teacher__content-img {
+    background-position-y: -30px;
+  }
+
+  .teacher__content-img._six {
     background-position-y: -30px;
   }
 
@@ -2815,6 +2928,24 @@ nav .container {
 @media (max-width: 479.98px) {
   .container {
     max-width: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .company__text {
+    font-size: 15px;
+  }
+
+  .company__descr {
+    font-size: 15px;
+  }
+
+  .teacher__content-img._one {
+    background-position-y: -40px;
+  }
+
+  .teacher__content-img._two {
+    background-position-y: -50px;
   }
 }
 
