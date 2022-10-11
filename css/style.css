@@ -1400,6 +1400,11 @@ nav .container {
 
 .benefits__content-img svg {
   fill: #e53131;
+  width: 80px;
+  height: 80px;
+}
+
+.benefits__content-img .bus {
   width: 48px;
   height: 48px;
 }
@@ -2227,6 +2232,10 @@ nav .container {
   stroke: #fff;
 }
 
+.modal__wrapper.video .modal__close path {
+  fill: #fff;
+}
+
 .modal__wrapper.video .modal iframe {
   width: 100%;
   height: 315px;
@@ -2260,6 +2269,14 @@ nav .container {
           justify-content: flex-end;
   margin-left: auto;
   z-index: 1001;
+}
+
+.modal__wrapper .modal__close svg {
+  fill: #000;
+}
+
+.modal__wrapper .modal__close path {
+  fill: #000;
 }
 
 .modal__btn {

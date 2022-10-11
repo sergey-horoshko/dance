@@ -44,11 +44,6 @@ window.addEventListener("DOMContentLoaded", () => {
 	bindModal(".btn_2", ".modal__form", ".modal__form .modal__close");
 	bindModal(".btn_3", ".modal__form", ".modal__form .modal__close");
 
-	const form = document.querySelectorAll("form");
-
-	// Обработка форм
-	postForm(form);
-
 	// Скролл ссылок
 	scrollLinks();
 });
@@ -178,41 +173,6 @@ function bindModal(trigger, modal, close) {
 			body.classList.remove("locked");
 		}
 	});
-}
-
-// Form
-function postForm(form) {
-	form.forEach((item) => {
-		item.addEventListener("submit", function (e) {
-			e.preventDefault();
-			let successModal = document.querySelector(".success");
-			let close = document.querySelector(".success .modal__close");
-			let body = document.body;
-			success(body, successModal, close);
-		});
-	});
-}
-
-// Успешная отправка
-function success(body, modal, close) {
-	modal.style.display = "flex";
-	close.addEventListener("click", () => {
-		closeModals();
-		modal.style.display = "none";
-		body.classList.remove("locked");
-	});
-	modal.addEventListener("click", (e) => {
-		if (e.target === modal) {
-			closeModals();
-			modal.style.display = "none";
-			body.classList.remove("locked");
-		}
-	});
-	setTimeout(() => {
-		closeModals();
-		modal.style.display = "none";
-		body.classList.remove("locked");
-	}, 3000);
 }
 
 // Закрытие всех модалок
